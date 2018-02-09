@@ -29,12 +29,15 @@ gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 
-gem 'dotenv-rails', '~> 2.2.1'
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
-end
+gem 'hyrax', '2.0.1'
+
+gem 'devise'
+gem 'devise-guests', '~> 0.6'
+gem 'dotenv-rails', '~> 2.2.1'
+gem 'rsolr', '>= 1.0'
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
@@ -45,18 +48,9 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
-gem 'hyrax', '2.0.1'
 group :development, :test do
-  gem 'solr_wrapper', '>= 0.3'
-end
-
-gem 'rsolr', '>= 1.0'
-gem 'devise'
-gem 'devise-guests', '~> 0.6'
-group :development, :test do
+  gem 'byebug', platform: :mri
   gem 'fcrepo_wrapper'
+  gem 'solr_wrapper', '>= 0.3'
   gem 'rspec-rails'
 end
