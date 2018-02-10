@@ -1,6 +1,8 @@
 Erawan
 ======
 
+[![Build Status](https://travis-ci.org/curationexperts/erawan.svg?branch=master)](https://travis-ci.org/curationexperts/erawan)
+
 An institutional repository.
 
 Development
