@@ -52,7 +52,9 @@ group :development, :test do
   gem 'bixby', '1.0.0-rc1'
   gem 'byebug', platform: :mri
   gem 'capybara', '~> 3.0'
+  gem 'database_cleaner'
   gem 'fcrepo_wrapper'
+  gem 'pry', '~> 0.11.3'
   gem 'rspec-rails'
   gem 'solr_wrapper', '>= 0.3'
 end
